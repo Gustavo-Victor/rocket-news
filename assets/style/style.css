@@ -1,0 +1,177 @@
+/*css variables*/
+:root {
+    --body-bg-color: #121214;
+    --text-color: #E1E1E6;
+    --title-color: #04D361;
+    --form-color: #A8A8A8;
+    --bg-button-color: #8257e5;
+    font-size: 1rem;
+}
+
+
+/*reset*/
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/*main content*/
+.container main {
+    background-color: var(--body-bg-color);
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/*header*/
+.container main header {
+    margin-bottom: 1rem;
+}
+
+.container main header img {
+    width: 60%;
+}
+
+
+/*information div*/
+.container main .information-div h2{
+    color: var(--title-color); 
+    font-weight: 700;
+    font-size: 1.6rem;    
+}
+
+.container main .information-div p{
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    opacity: 0.8;
+}
+
+.container main .information-div .slogan{
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0.8rem 0;
+    opacity: 1;
+
+}
+
+
+/*form*/
+.container main .newsletter-form {
+    color: var(--form-color);
+    font-size: 1rem;
+    position: relative;
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.container main .newsletter-form label{
+    font-weight: 700;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.container main .newsletter-form .align {
+    display: flex;
+    align-items: stretch;    
+    width: 120%;
+    position: absolute;
+    left: 0;
+}
+
+.container main .newsletter-form input{
+    padding: 15px 10px;
+    outline: none;
+    border: none;
+    width: 100%;
+    color: var(--body-bg-color);
+}
+
+.container main .newsletter-form input::placeholder {
+    color: var(--form-color);
+}
+
+
+.container main .newsletter-form button{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-button-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.container main .newsletter-form button svg {
+    color: #fff;
+}
+
+/*action div*/
+.container main .action{
+    display: flex;
+    align-items: center;
+    color: var(--bg-button-color);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+
+/*aside content (img)*/
+.container aside {
+    width: 50%; 
+    background-image: url('../img/read_news.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+@media screen and (max-width: 550px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container main {
+        width: 100%;
+        height: 100%;
+        justify-content: flex-start;
+        gap: 3rem;
+    }
+
+    .container main header img {
+        width: 10rem;
+    }
+
+
+    .container main .newsletter-form .align {
+        position: relative;
+        width: 100%;        
+    }
+
+    .container aside {
+        display: none;
+    }
+}
